@@ -1,0 +1,15 @@
+{
+  "name": "variables",
+  "version": "1.0.0",
+  "description": "Notes on variables in TypeScript.",
+  "main": "./src/variables.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
+  },
+  "author": "brittni and the polar bear",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "typescript": "^5.3.3"
+  }
+}
