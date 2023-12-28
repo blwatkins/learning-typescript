@@ -38,3 +38,11 @@ let anyValue: any = 543;
 console.log(`anyValue = ${anyValue}; type = ${typeof anyValue}`);
 anyValue = 'this is now a string';
 console.log(`anyValue = ${anyValue}; type = ${typeof anyValue}`);
+
+// Literal Types
+type Quantity = 50 | 100; // type alias
+let quantity: Quantity = 50;
+console.log(`quantity = ${quantity}`);
+quantity = 100;
+console.log(`quantity = ${quantity}`);
+// quantity = 54; // will cause a compiler error

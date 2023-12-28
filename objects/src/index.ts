@@ -1,5 +1,8 @@
 // Objects Notes
 
+import { testTypeAlias } from "./type-alias";
+import { testIntersectionTypes } from "./intersection-types";
+
 let employee: { // object type annotation
     readonly id: number, // property value cannot be changed
     firstName: string,
@@ -49,3 +52,7 @@ if (employee.isEligibleToRetire()) {
 } else {
     console.log('Employee is NOT eligible to retire.');
 }
+
+testTypeAlias();
+
+testIntersectionTypes();

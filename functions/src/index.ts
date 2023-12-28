@@ -1,5 +1,14 @@
 // Functions Notes
 
+import {testOverloadingFunctions} from "./overloading-functions";
+import { testUnionTypes } from "./union-types";
+import { testNullableTypes } from "./nullable-types";
+import { testOptionalPropertyAccess } from "./optional-property-access";
+import { testOptionalCall } from "./optional-call";
+import { testNullishCoalescingOperator } from "./nullish-coalescing-operator";
+import { testUnknownType } from "./unknown-type";
+
+
 const calculateTax = (income: number): number => {
     return income * 0.0825;
 }
@@ -15,28 +24,16 @@ sayHello();
 sayHello('Bill');
 // sayHello('Bill', 56); // this will cause a compiler error
 
-// overloading functions
-// NOTE: The signature of the implementation is not visible from the outside.
-// When writing an overloaded function, you should always have two or more signatures
-// above the implementation of the function.
+testOverloadingFunctions();
 
-function greeting(): string; // signature #1
-function greeting(username: string): string; // signature #2
-function greeting(username: string, day: number, weather: string): string; // signature #3
-function greeting(username?: string, day?: number, weather?: string) { // implementation signature
-    let message: string;
-    if (username === undefined) {
-        message = 'Hello!';
-    } else if (day === undefined || weather === undefined) {
-        message = `Hello, ${username}!`;
-    } else {
-        message = `Hello, ${username}. Today is day ${day} of the month! The weather is ${weather}.`;
-    }
+testUnionTypes();
 
-    return message;
-}
+testNullableTypes();
 
-console.log(greeting());
-console.log(greeting('Cheryl'));
-// console.log(greeting('Peter', 14)); // will cause a compiler error
-console.log(greeting('Carl', 25, 'sunny'));
+testOptionalPropertyAccess();
+
+testOptionalCall();
+
+testNullishCoalescingOperator();
+
+testUnknownType();

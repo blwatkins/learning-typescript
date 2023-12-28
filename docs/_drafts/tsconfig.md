@@ -24,6 +24,9 @@
 `noImplicitAny`
 * Should the compiler throw an error for implicit any declarations?
 
+`strictNullChecks`
+* When enabled, null and undefined will not be acceptable values for variables unless you explicitly declare them as nullable.
+
 `noUnusedLocals`
 * Should we have error reporting when local variables aren't used?
 
@@ -32,3 +35,6 @@
 
 `noImplicitReturns`
 * Should we have error reporting for codepaths that do not explicitly return in a function?
+
+`allowUnreachableCode`
+* Should we allow unreachable code?
