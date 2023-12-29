@@ -10,9 +10,9 @@ function greeting(username: string): string; // signature #2
 function greeting(username: string, day: number, weather: string): string; // signature #3
 function greeting(username?: string, day?: number, weather?: string): string { // implementation signature
     let message: string;
-    if (username === undefined) {
+    if (!username) {
         message = 'Hello!';
-    } else if (day === undefined || weather === undefined) {
+    } else if (!day || !weather) {
         message = `Hello, ${username}!`;
     } else {
         message = `Hello, ${username}. Today is day ${day} of the month! The weather is ${weather}.`;
@@ -24,8 +24,9 @@ function greeting(username?: string, day?: number, weather?: string): string { /
 function testOverloadingFunctions(): void {
     console.log(greeting());
     console.log(greeting('Cheryl'));
-    // console.log(greeting('Peter', 14)); // will cause a compiler error
+    // console.log(greeting('Peter', 14)); // this will cause a compiler error (no visible implementation with 2 parameters)
     console.log(greeting('Carl', 25, 'sunny'));
+    // console.log(greeting('Mr. Darcy', undefined, 31)); // this will cause a compiler error (visible implementation requires a number)
 }
 
 export { testOverloadingFunctions };

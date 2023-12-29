@@ -36,5 +36,8 @@
 `noImplicitReturns`
 * Should we have error reporting for codepaths that do not explicitly return in a function?
 
+`noImplicitOverride`
+* Should we have error reporting when overriding members are NOT marked with an override modifier?
+
 `allowUnreachableCode`
 * Should we allow unreachable code?
