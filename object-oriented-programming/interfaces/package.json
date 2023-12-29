@@ -1,7 +1,7 @@
 {
-  "name": "classes",
+  "name": "interfaces",
   "version": "1.0.0",
-  "description": "Notes on classes in TypeScript.",
+  "description": "Notes on interfaces in TypeScript.",
   "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
